@@ -1,5 +1,10 @@
 @use "./base";
 @use "./variables";
+// ----- components------
 @use "./components/header";
+
+//-------pages---------
+//home
 @use "./pages/Home/hero";
 @use "./pages/Home/familyestate";
+@use "./pages/Home/products";

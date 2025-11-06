@@ -2,7 +2,7 @@ import bgImage from "../../../../assets/images/family_estate.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import CustomButtons from "../../../../components/CustomButtons";
 
 const FamilyEstate = () => {
   useEffect(() => {
@@ -46,7 +46,11 @@ const FamilyEstate = () => {
                   <br />
                   Australian Restaurant of the Year’ – Gourmet Traveller
                 </p>
-                <Link to="/contact">Contact</Link>
+                <CustomButtons
+                  path="/contact"
+                  name="Contact Us"
+                  className="btn"
+                />
               </div>
             </div>
           </div>
