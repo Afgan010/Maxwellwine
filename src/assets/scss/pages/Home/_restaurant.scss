@@ -1,0 +1,63 @@
+@use "../../variables" as c;
+
+.restaurant {
+  padding: 20px 0;
+  .container {
+    .row {
+      height: auto;
+      gap: 30px;
+      .leftSide {
+        position: sticky;
+        top: 100px;
+        width: calc(50% - 15px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        height: 600px;
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+          .text {
+            font-size: 20px;
+            font-weight: 300;
+            color: c.$pureWhite;
+          }
+          .journalBtn {
+            font-size: 20px;
+            color: c.$pureWhite;
+            padding: 6px;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+      .rightSide {
+        width: calc(50% - 15px);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .imgContainer {
+          width: 100%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .title {
+          font-size: 23px;
+          font-weight: 300;
+          color: c.$dark;
+        }
+        .desc {
+          font-size: 18px;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
