@@ -1,0 +1,60 @@
+@use "../../variables" as c;
+
+.familyEstate {
+  border-bottom: 1px solid c.$dark;
+  .container {
+    .row {
+      flex-direction: column;
+      .top {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        .forAos {
+          .title {
+            margin-bottom: 10px;
+            padding: 20px 0;
+            font-size: 70px;
+            font-weight: 400;
+          }
+          .text {
+            padding: 20px 0;
+            text-align: end;
+            line-height: 1.8;
+            font-size: 20px;
+          }
+        }
+      }
+      .bottom {
+        .imgContainer {
+          width: 100%;
+          //   padding: 15px 0 20px;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        .contact {
+          margin-right: 20px;
+          transform: translateY(-180px);
+          .forAos {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 20px;
+            .desc {
+              color: c.$pureWhite;
+              line-height: 1.5;
+              font-size: 20px;
+            }
+            a {
+              font-size: 20px;
+              color: c.$pureWhite;
+              padding: 6px;
+              border-bottom: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

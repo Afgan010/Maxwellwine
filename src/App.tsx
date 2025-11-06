@@ -5,7 +5,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <MyShopRoutes />
+      <main>
+        <MyShopRoutes />
+      </main>
     </>
   );
 };

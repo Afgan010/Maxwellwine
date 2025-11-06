@@ -1,7 +1,13 @@
+import FamilyEstate from "./Sections/FamilyEstate";
 import Hero from "./Sections/Hero";
 
 const Home = () => {
-  return <Hero />;
+  return (
+    <main className="main">
+      <Hero />
+      <FamilyEstate />
+    </main>
+  );
 };
 
 export default Home;
