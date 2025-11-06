@@ -1,45 +1,53 @@
 @use "../../variables" as c;
 
-.product {
-  padding: 20px 0;
-
+.products {
+  padding: 60px 0;
   .container {
     .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
+      flex-direction: column;
+      .title {
+        font-size: 32px;
+        font-weight: 400;
+        color: c.$dark;
+        margin-bottom: 50px;
+      }
 
-      .productsContent {
-        position: relative;
-        width: calc(50% - 15px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        height: 600px;
-        .info {
-          position: absolute;
-          bottom: 30px;
-          left: 30px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 20px;
-          .title {
-            font-size: 36px;
-            color: c.$pureWhite;
-            font-weight: 400;
-          }
-          .text {
-            color: c.$pureWhite;
-            font-size: 19px;
-          }
-          .productBtn {
-            display: inline-block;
-            font-size: 20px;
-            color: c.$pureWhite;
-            padding: 6px;
-            border-bottom: 1px solid #fff;
+      .porduct {
+        width: 100%;
+        .product-swiper {
+          .product-card {
+            background-color: transparent;
+            text-align: left;
+            padding: 0 10px;
+
+            .productImage {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+              border-radius: 0;
+              margin-bottom: 10px;
+            }
+
+            .title {
+              font-size: 18px;
+              font-weight: 500;
+              color: #333;
+              margin-bottom: 4px;
+            }
+
+            .detail {
+              font-size: 14px;
+              color: #666;
+              margin-bottom: 8px;
+              height: auto;
+              overflow: visible;
+            }
+
+            .price {
+              display: block;
+              font-weight: 600;
+              margin-bottom: 2px;
+            }
           }
         }
       }

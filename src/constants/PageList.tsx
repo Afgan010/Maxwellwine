@@ -23,7 +23,7 @@ const pageList: PageItem[] = [
     path: "/",
     element: <Home />,
     is_visiable: true,
-    for_header: false,
+    for_header: true,
   },
   {
     id: "shop",

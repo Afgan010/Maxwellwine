@@ -1,45 +1,62 @@
-import CustomButtons from "../../../../components/CustomButtons";
-import image from "../../../../assets/images/products1.webp";
-import image2 from "../../../../assets/images/products2.webp";
+import { useEffect, useState } from "react";
+import type { IProducts } from "../../Models/HomeModels";
+import { HomeService } from "../../Services/HomeServices";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const Products = () => {
+  const [wine, setWine] = useState<IProducts[]>([]);
+
+  const getData = async () => {
+    try {
+      const res = await HomeService.productList();
+
+      setWine(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+  console.log(wine);
+
   return (
-    <section className="product">
+    <section className="products">
       <div className="container">
         <div className="row">
-          <div
-            className="productsContent"
-            style={{ backgroundImage: `url(${image})` }}
-          >
-            <div className="info">
-              <h3 className="title">Shop Mead</h3>
-              <p className="text">
-                An accient craft, honed by Maxwell to become <br />
-                Australia's favourite honey wine.A mead for all <br /> occasions
-              </p>
-              <CustomButtons
-                path="/shop"
-                name="Shop Now"
-                className="productBtn"
-              />
-            </div>
-          </div>
-          <div
-            className="productsContent"
-            style={{ backgroundImage: `url(${image2})` }}
-          >
-            <div className="info">
-              <h3 className="title">Our Story</h3>
-              <p className="text">
-                With a legacy spanning decades, the Maxwell <br />
-                family continues to shape the estate’s story.
-              </p>
-              <CustomButtons
-                path="/about"
-                name="About Us"
-                className="productBtn"
-              />
-            </div>
+          <h2 className="title">Estate Favourites</h2>
+
+          <div className="porduct">
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={100}
+              slidesPerView={4}
+              loop={true}
+              grabCursor={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              className="product-swiper"
+            >
+              {wine.map((item) => (
+                <SwiperSlide key={item._id}>
+                  <div className="product-card ">
+                    <img
+                      src={item.productImage}
+                      alt={item.name}
+                      className="productImage"
+                    />
+                    <h3 className="title">{item.name}</h3>
+                    <p className="detail">{item.details}</p>
+                    <span className="price">{item.price} $</span>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
