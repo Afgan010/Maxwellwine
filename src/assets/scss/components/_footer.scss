@@ -1,0 +1,106 @@
+@use "../variables" as c;
+
+.footer {
+  padding: 20px;
+  .container {
+    .row {
+      flex-direction: column;
+      .top {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          max-width: 150px;
+          height: 200px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .topRight {
+          display: flex;
+          gap: 70px;
+          .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            #email {
+              font-size: 28px;
+              font-weight: 200;
+            }
+            .emailInp {
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid;
+            }
+            .footerBtn {
+              background-color: c.$dark;
+              color: c.$pureWhite;
+              text-align: center;
+              font-size: 18px;
+              padding: 6px;
+              border-radius: 12px;
+              &:hover {
+                color: c.$dark;
+                background-color: c.$pureWhite;
+              }
+            }
+          }
+          .navBar {
+            .navList {
+              .navItem {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                a {
+                  font-size: 18px;
+                  color: c.$dark;
+                  &:hover {
+                    color: c.$pureWhite;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .middle {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        .mLeft {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .location {
+            font-size: 20px;
+          }
+          a {
+            color: c.$dark;
+          }
+        }
+        .footerImg {
+          max-width: 600px;
+          img {
+            width: 100%;
+          }
+        }
+        .icons {
+          display: flex;
+          gap: 20px;
+          a {
+            color: c.$dark;
+            .icon {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+      .bottom {
+        padding: 20px 0;
+        display: flex;
+        gap: 40px;
+      }
+    }
+  }
+}

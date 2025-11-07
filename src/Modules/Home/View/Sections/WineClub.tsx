@@ -28,7 +28,7 @@ const WineClub = () => {
               </p>
               <CustomButtons
                 path="#"
-                name="Join The Clan"
+                name="Join The Club"
                 className="joinBtn"
               />
             </div>
