@@ -36,7 +36,7 @@ const pageList: PageItem[] = [
   {
     id: "shopDetail",
     title: "shopDetail",
-    path: "/shop-detail/:id",
+    path: "/shop-details/:id",
     element: <ShopDetail />,
     is_visiable: true,
     for_header: false,

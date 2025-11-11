@@ -1,0 +1,35 @@
+@use "../../variables" as c;
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //   width: 100vw;
+  .container {
+    .row {
+      justify-content: center;
+      align-items: center;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        .title {
+          font-size: 48px;
+          font-weight: 300;
+        }
+        .btn {
+          color: c.$dark;
+          border: 1px solid #000;
+          border-radius: 12px;
+          padding: 8px 16px;
+          &:hover {
+            background-color: c.$dark;
+            color: c.$pureWhite;
+          }
+        }
+      }
+    }
+  }
+}

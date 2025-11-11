@@ -10,6 +10,7 @@ const Shop = () => {
   const getData = async () => {
     try {
       const res = await ShopService.productList();
+      console.log(res);
       setWine(res);
     } catch (error) {
       console.log(error);
