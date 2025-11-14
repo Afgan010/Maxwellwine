@@ -1,4 +1,4 @@
-import CustomButtons from "../../../../components/CustomButtons";
+import CustomButtons from "../../../../components/CustomLink";
 import image from "../../../../assets/images/products1.webp";
 import image2 from "../../../../assets/images/products2.webp";
 import { useEffect } from "react";

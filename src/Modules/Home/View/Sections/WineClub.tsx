@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import bgImage from "../../../../assets/images/wineClub.webp";
-import CustomButtons from "../../../../components/CustomButtons";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CustomLink from "../../../../components/CustomLink";
 
 const WineClub = () => {
   useEffect(() => {
@@ -21,27 +21,25 @@ const WineClub = () => {
             className="bgImage"
             style={{ backgroundImage: `url(${bgImage})` }}
           >
-            <div className="feedBack" data-aos="fade-up">
-              <h3 className="title">JOIN THE MAXWELL CLAN WINE CLUB</h3>
-              <p className="text">
+            <div className="feedBack">
+              <h3 className="title" data-aos="fade-up">
+                JOIN THE MAXWELL CLAN WINE CLUB
+              </h3>
+              <p className="text" data-aos="fade-up">
                 I love seeing the team at the annual <br /> dinners in Brisbane,
                 always great <br /> food and generous with the wines! <br /> -
                 MATTHIAS, MEMBER SINCE 2017
               </p>
             </div>
-            <div className="bottom" data-aos="fade-up">
-              <p className="joinClan">
+            <div className="bottom">
+              <p className="joinClan" data-aos="fade-up">
                 Choose your favourite wines or meads to come when <br /> it
                 suits you. Be welcomed like a member of our <br />
                 extended family with all the benefits that brings. <br />
                 Member-only pricing, events and even member <br />
                 exclusive wines, plus much more.
               </p>
-              <CustomButtons
-                path="#"
-                name="Join The Club"
-                className="joinBtn"
-              />
+              <CustomLink path="#" name="Join The Club" className="joinBtn" />
             </div>
           </div>
         </div>

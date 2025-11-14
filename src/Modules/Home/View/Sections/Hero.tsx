@@ -27,23 +27,23 @@ const Hero = () => {
 
       <div className="container">
         <div className="row">
-          <div className="leftSide" data-aos="fade-up">
-            <h2 className="title">
+          <div className="leftSide">
+            <h2 className="title" data-aos="fade-up">
               GROUNDED IN <br />
               LIMESTONE & LEGACY
             </h2>
-            <p className="text">
+            <p className="text" data-aos="fade-up">
               Rooted in the heart of McLaren Vale, Maxwell Wines is a <br />
               family-owned estate where tradition meets innovation.
             </p>
           </div>
 
           <div className="rightSide">
-            <div className="forAos" data-aos="fade-up">
-              <Link to="/about" className="btn aboutBtn">
+            <div className="forAos">
+              <Link to="/about" className="btn aboutBtn" data-aos="fade-up">
                 About Us
               </Link>
-              <Link to="/shop" className="btn">
+              <Link to="/shop" className="btn" data-aos="fade-up">
                 Shop Now
               </Link>
             </div>

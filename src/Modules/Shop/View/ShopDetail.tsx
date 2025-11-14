@@ -26,13 +26,22 @@ const ShopDetail = () => {
   console.log(details);
 
   return (
-    <div className="shopDetail">
-      <h2>{details?.name}</h2>
-      <img src={details?.productImage} alt={details?.name} />
-      <p>{details?.details}</p>
-      <span>{details?.price} $</span>
-      <p>dhsdhhd</p>
-    </div>
+    <section className="shopDetails">
+      <div className="container">
+        <div className="row">
+          <div className="shopDetail">
+            <h2 className="title">{details?.name}</h2>
+            <img
+              src={details?.productImage}
+              alt={details?.name}
+              className="image"
+            />
+            <p className="details">{details?.details}</p>
+            <span className="price">{details?.price} $</span>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

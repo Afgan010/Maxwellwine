@@ -1,10 +1,10 @@
 import leftBg from "../../../../assets/images/wine1.webp";
 import restaurant from "../../../../assets/images/Restaurant.webp";
 import staff from "../../../../assets/images/staff.webp";
-import CustomButtons from "../../../../components/CustomButtons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import CustomLink from "../../../../components/CustomLink";
 
 const Restaurant = () => {
   useEffect(() => {
@@ -23,12 +23,12 @@ const Restaurant = () => {
             className="leftSide"
             style={{ backgroundImage: `url(${leftBg})` }}
           >
-            <div className="info" data-aos="fade-up">
-              <p className="text">
+            <div className="info">
+              <p className="text" data-aos="fade-up">
                 Stay updated with events, winery news, <br /> wine releases and
                 restaurant happenings at <br /> Maxwell Wines
               </p>
-              <CustomButtons
+              <CustomLink
                 path="#"
                 name="Maxwell Journal"
                 className="journalBtn"

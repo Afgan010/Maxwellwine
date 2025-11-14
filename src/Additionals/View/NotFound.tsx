@@ -1,4 +1,4 @@
-import CustomButtons from "../../components/CustomButtons";
+import CustomLink from "../../components/CustomLink";
 
 const NotFound = () => {
   return (
@@ -7,7 +7,7 @@ const NotFound = () => {
         <div className="row">
           <div className="content">
             <h2 className="title">PAGE NOT FOUND</h2>
-            <CustomButtons path="/" name="Back to Home page" className="btn" />
+            <CustomLink path="/" name="Back to Home page" className="btn" />
           </div>
         </div>
       </div>

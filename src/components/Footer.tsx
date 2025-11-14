@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import pageList from "../constants/PageList";
-import CustomButtons from "./CustomButtons";
+import CustomButtons from "./CustomLink";
 const Footer = () => {
   const year = new Date().getFullYear();
 

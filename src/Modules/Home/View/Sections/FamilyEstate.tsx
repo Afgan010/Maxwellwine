@@ -2,7 +2,7 @@ import bgImage from "../../../../assets/images/family_estate.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import CustomButtons from "../../../../components/CustomButtons";
+import CustomLink from "../../../../components/CustomLink";
 
 const FamilyEstate = () => {
   useEffect(() => {
@@ -19,11 +19,11 @@ const FamilyEstate = () => {
       <div className="container">
         <div className="row">
           <div className="top">
-            <div className="forAos" data-aos="fade-up">
-              <h2 className="title">
+            <div className="forAos">
+              <h2 className="title" data-aos="fade-up">
                 A Family Estate, <br /> Crafted By Generations.
               </h2>
-              <p className="text">
+              <p className="text" data-aos="fade-up">
                 Maxwell Wines crafts premium wines that celebrate the <br />
                 limestone character of the estate. From bold Shiraz to vibrant
                 <br />
@@ -38,18 +38,14 @@ const FamilyEstate = () => {
               <img src={bgImage} alt="image" />
             </div>
             <div className="contact">
-              <div className="forAos" data-aos="fade-up">
-                <p className="desc">
+              <div className="forAos">
+                <p className="desc" data-aos="fade-up">
                   A hidden gem in McLaren Vale, the Maxwell Restaurant <br />
                   sets the highest standards in regional fine dining. ‘South
                   <br />
                   Australian Restaurant of the Year’ – Gourmet Traveller
                 </p>
-                <CustomButtons
-                  path="/contact"
-                  name="Contact Us"
-                  className="btn"
-                />
+                <CustomLink path="/contact" name="Contact Us" className="btn" />
               </div>
             </div>
           </div>
