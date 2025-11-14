@@ -13,7 +13,6 @@ const ShopNow = () => {
       mirror: true,
       offset: 100,
     });
-    AOS.refresh();
   }, []);
   return (
     <section className="shopNow">

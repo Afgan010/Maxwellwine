@@ -12,7 +12,6 @@ const Hero = () => {
       mirror: true,
       offset: 100,
     });
-    AOS.refresh();
   }, []);
 
   return (
@@ -28,7 +27,7 @@ const Hero = () => {
 
       <div className="container">
         <div className="row">
-          <div className="leftSide" data-aos="fade-right" data-aos-delay="200">
+          <div className="leftSide" data-aos="fade-up">
             <h2 className="title">
               GROUNDED IN <br />
               LIMESTONE & LEGACY

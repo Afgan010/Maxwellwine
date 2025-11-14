@@ -2,8 +2,19 @@ import leftBg from "../../../../assets/images/wine1.webp";
 import restaurant from "../../../../assets/images/Restaurant.webp";
 import staff from "../../../../assets/images/staff.webp";
 import CustomButtons from "../../../../components/CustomButtons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Restaurant = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 100,
+    });
+  }, []);
   return (
     <section className="restaurant">
       <div className="container">
@@ -12,7 +23,7 @@ const Restaurant = () => {
             className="leftSide"
             style={{ backgroundImage: `url(${leftBg})` }}
           >
-            <div className="info">
+            <div className="info" data-aos="fade-up">
               <p className="text">
                 Stay updated with events, winery news, <br /> wine releases and
                 restaurant happenings at <br /> Maxwell Wines

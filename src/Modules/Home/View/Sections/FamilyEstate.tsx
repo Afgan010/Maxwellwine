@@ -12,7 +12,6 @@ const FamilyEstate = () => {
       mirror: true,
       offset: 100,
     });
-    AOS.refresh();
   }, []);
 
   return (
